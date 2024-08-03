@@ -1,0 +1,26 @@
+{
+  "name": "d_custom_logger",
+  "version": "1.0.0",
+  "description": "customize console logs based on the env variables",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhanapalrp/d_custom_logger.git"
+  },
+  "keywords": [
+    "logger",
+    "env",
+    "custom",
+    "logs show",
+    "logs off"
+  ],
+  "author": "dhanapal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhanapalrp/d_custom_logger/issues"
+  },
+  "homepage": "https://github.com/dhanapalrp/d_custom_logger#readme"
+}
