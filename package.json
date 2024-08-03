@@ -1,6 +1,6 @@
 {
   "name": "d_custom_logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "customize console logs based on the env variables",
   "main": "index.js",
   "scripts": {
