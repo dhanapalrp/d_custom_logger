@@ -1,23 +1,23 @@
 const {
-  DLOGS_SHOW_ERROR = true,
-  DLOGS_SHOW_LOGS = true,
-  DLOGS_SHOW_WARN = true,
+  DLOGS_SHOW_ERROR = "true",
+  DLOGS_SHOW_LOGS = "true",
+  DLOGS_SHOW_WARN = "true",
 } = process.env;
 
+const showError = DLOGS_SHOW_ERROR === "true";
+const showLogs = DLOGS_SHOW_LOGS === "true";
+const showWarn = DLOGS_SHOW_WARN === "true";
+
 function log(data) {
-  if (DLOGS_SHOW_LOGS) {
-    console.log(data);
-  }
+  showLogs && console.log(data);
 }
+
 function error(data) {
-  if (DLOGS_SHOW_ERROR) {
-    console.error(data);
-  }
+  showError && console.error(data);
 }
+
 function warn(data) {
-  if (DLOGS_SHOW_WARN) {
-    console.warn(data);
-  }
+  showWarn && console.warn(data);
 }
 
 module.exports = {

@@ -1,10 +1,10 @@
 {
   "name": "d_custom_logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "customize console logs based on the env variables",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node example.js"
   },
   "repository": {
     "type": "git",
