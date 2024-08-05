@@ -1,7 +1,7 @@
 {
   "name": "d_custom_logger",
   "version": "1.0.2",
-  "description": "customize console logs based on the env variables",
+  "description": "Globally display or hide the logs based on the configuration",
   "main": "index.js",
   "scripts": {
     "test": "node example.js"
@@ -15,7 +15,10 @@
     "env",
     "custom",
     "logs show",
-    "logs off"
+    "logs off",
+    "display on",
+    "display off",
+    "Globally"
   ],
   "author": "dhanapal",
   "license": "ISC",

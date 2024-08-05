@@ -1,26 +1,36 @@
-const {
-  DLOGS_SHOW_ERROR = "true",
-  DLOGS_SHOW_LOGS = "true",
-  DLOGS_SHOW_WARN = "true",
-} = process.env;
+// Default values
+let showError = true;
+let showLogs = true;
+let showWarn = true;
 
-const showError = DLOGS_SHOW_ERROR === "true";
-const showLogs = DLOGS_SHOW_LOGS === "true";
-const showWarn = DLOGS_SHOW_WARN === "true";
-
-function log(data) {
-  showLogs && console.log(data);
+function configure(config = {}) {
+  if (typeof config === "object") {
+    // If config is an object, override default values
+    showError =
+      config.DLOGS_SHOW_ERROR !== undefined
+        ? config.DLOGS_SHOW_ERROR
+        : showError;
+    showLogs =
+      config.DLOGS_SHOW_LOGS !== undefined ? config.DLOGS_SHOW_LOGS : showLogs;
+    showWarn =
+      config.DLOGS_SHOW_WARN !== undefined ? config.DLOGS_SHOW_WARN : showWarn;
+  }
 }
 
-function error(data) {
-  showError && console.error(data);
+function log(...data) {
+  showLogs && console.log(...data);
 }
 
-function warn(data) {
-  showWarn && console.warn(data);
+function error(...data) {
+  showError && console.error(...data);
+}
+
+function warn(...data) {
+  showWarn && console.warn(...data);
 }
 
 module.exports = {
+  configure,
   log,
   error,
   warn,

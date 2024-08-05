@@ -1,7 +1,6 @@
 # d_custom_logger
 
-Customize the loggings based on the environment variables
-example:Turn off logs based on env variables
+Globally display or hide the logs based on the configuration
 
 ## Table of Contents
 
@@ -18,12 +17,16 @@ npm i d_custom_logger@latest
 
 ## configuration
 
-Create a `.env` file in the root of your project :add these env variables
+Configure logger at the root of the project:
 
-```env
-DLOGS_SHOW_ERROR=false
-DLOGS_SHOW_LOGS=true
-DLOGS_SHOW_WARN=true
+```dosini
+const logger = require("d_custom_logger");
+
+logger.configure({
+  DLOGS_SHOW_ERROR: true,
+  DLOGS_SHOW_LOGS: true,
+  DLOGS_SHOW_WARN: true,
+});
 ```
 
 ## usage
