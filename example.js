@@ -1,4 +1,9 @@
+//commonjs
+
 const logger = require("d_custom_logger");
+
+//es6
+// import logger from "d_custom_logger";
 
 logger.configure({
   DLOGS_SHOW_ERROR: true,

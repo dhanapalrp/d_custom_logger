@@ -20,7 +20,12 @@ npm i d_custom_logger@latest
 Configure logger at the root of the project:
 
 ```dosini
+//commonjs
+
 const logger = require("d_custom_logger");
+
+//es6
+import logger from "d_custom_logger";
 
 logger.configure({
   DLOGS_SHOW_ERROR: true,
@@ -32,7 +37,12 @@ logger.configure({
 ## usage
 
 ```dosini
+//commonjs
+
 const logger = require("d_custom_logger");
+
+//es6
+import logger from "d_custom_logger";
 
 logger.error("d_custom_logger" ,"error");// d_custom_logger error
 logger.log("d_custom_logger","success"); // d_custom_logger success

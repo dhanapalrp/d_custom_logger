@@ -1,11 +1,9 @@
-// Default values
 let showError = true;
 let showLogs = true;
 let showWarn = true;
 
-function configure(config = {}) {
+export function configure(config = {}) {
   if (typeof config === "object") {
-    // If config is an object, override default values
     showError =
       config.DLOGS_SHOW_ERROR !== undefined
         ? config.DLOGS_SHOW_ERROR
@@ -17,21 +15,14 @@ function configure(config = {}) {
   }
 }
 
-function log(...data) {
+export function log(...data) {
   showLogs && console.log(...data);
 }
 
-function error(...data) {
+export function error(...data) {
   showError && console.error(...data);
 }
 
-function warn(...data) {
+export function warn(...data) {
   showWarn && console.warn(...data);
 }
-
-module.exports = {
-  configure,
-  log,
-  error,
-  warn,
-};
