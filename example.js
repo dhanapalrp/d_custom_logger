@@ -6,6 +6,8 @@ logger.configure({
   DLOGS_SHOW_WARN: true,
 });
 
-logger.error("test");
-logger.log("test success");
-logger.warn("test success");
+let data = "d_custom_logger";
+
+logger.error("test", data);
+logger.log("test success", data);
+logger.warn("test success", data);

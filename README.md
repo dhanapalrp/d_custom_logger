@@ -34,7 +34,7 @@ logger.configure({
 ```dosini
 const logger = require("d_custom_logger");
 
-logger.error("test");
-logger.log("test success");
-logger.warn("test success");
+logger.error("d_custom_logger" ,"error");// d_custom_logger error
+logger.log("d_custom_logger","success"); // d_custom_logger success
+logger.warn("d_custom_logger", "warn" ); // d_custom_logger warn
 ```
