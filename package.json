@@ -1,6 +1,7 @@
 {
   "name": "d_custom_logger",
   "version": "2.0.0",
+  "license": "MIT",
   "description": "Globally display or hide the logs based on the configuration",
   "main": "./index.cjs.js",
   "exports": {
@@ -29,7 +30,6 @@
     "es6"
   ],
   "author": "dhanapal",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dhanapalrp/d_custom_logger/issues"
   },
