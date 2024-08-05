@@ -2,7 +2,7 @@ let showError = true;
 let showLogs = true;
 let showWarn = true;
 
-export function configure(config = {}) {
+function configure(config = {}) {
   if (typeof config === "object") {
     showError =
       config.DLOGS_SHOW_ERROR !== undefined
@@ -15,14 +15,21 @@ export function configure(config = {}) {
   }
 }
 
-export function log(...data) {
+function log(...data) {
   showLogs && console.log(...data);
 }
 
-export function error(...data) {
+function error(...data) {
   showError && console.error(...data);
 }
 
-export function warn(...data) {
+function warn(...data) {
   showWarn && console.warn(...data);
 }
+
+export default {
+  configure,
+  log,
+  warn,
+  error,
+};
