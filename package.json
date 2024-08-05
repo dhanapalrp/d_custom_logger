@@ -1,6 +1,6 @@
 {
   "name": "d_custom_logger",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0-beta.3",
   "description": "Globally display or hide the logs based on the configuration",
   "main": "./index.cjs.js",
   "exports": {

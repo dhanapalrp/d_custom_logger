@@ -27,9 +27,11 @@ function warn(...data) {
   showWarn && console.warn(...data);
 }
 
-export default {
+const logger = {
   configure,
   log,
-  warn,
   error,
+  warn,
 };
+
+export default logger;
