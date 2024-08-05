@@ -28,33 +28,24 @@ const logger = require("d_custom_logger");
 import logger from "d_custom_logger";
 
 logger.configure({
-  DLOGS_SHOW_ERROR: true,
-  DLOGS_SHOW_LOGS: true,
-  DLOGS_SHOW_WARN: true,
+  display: true, //globally hide all logs
+  log: true,
+  error: true,
+  warn: true,
+  debug: true,
+  info: true,
+  trace: true,
 });
+
 ```
 
 ## usage
 
 ```dosini
-//commonjs
+Based on the configuration console will display output
 
-const logger = require("d_custom_logger");
-
-//es6
-import logger from "d_custom_logger";
-
-logger.error("d_custom_logger" ,"error");// d_custom_logger error
-logger.log("d_custom_logger","success"); // d_custom_logger success
-logger.warn("d_custom_logger", "warn" ); // d_custom_logger warn
-
-
-import {log,error,warn} from "d_custom_logger";//es6
-const {log,error,warn} = require("d_custom_logger");//commonJs
-
-
-error("d_custom_logger" ,"error"); // d_custom_logger error
-log("d_custom_logger","success"); // d_custom_logger success
-warn("d_custom_logger", "warn" ); // d_custom_logger warn
+console.error("D_CUSTOM_LOGGER error", data);
+console.log("D_CUSTOM_LOGGER log", data);
+console.warn("D_CUSTOM_LOGGER WARN", data);
 
 ```

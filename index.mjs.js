@@ -19,7 +19,7 @@ const originalConsole = {
 function configure(config = {}) {
   if (typeof config === "object") {
     showError = config.error !== undefined ? config.error : showError;
-    showLogs = config.logs !== undefined ? config.logs : showLogs;
+    showLogs = config.log !== undefined ? config.log : showLogs;
     showWarn = config.warn !== undefined ? config.warn : showWarn;
     showDebug = config.debug !== undefined ? config.debug : showDebug;
     showInfo = config.info !== undefined ? config.info : showInfo;
@@ -56,7 +56,7 @@ console.info = (...args) => {
 };
 
 console.trace = (...args) => {
-  if (showInfo && display) {
+  if (showTrace && display) {
     originalConsole.trace(...args);
   }
 };
