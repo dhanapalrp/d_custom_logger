@@ -5,8 +5,8 @@ Globally display or hide the logs based on the configuration
 ## Table of Contents
 
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
+- [Configuration](#Configuration)
+- [Usage](#Usage)
 
 ## Installation
 
@@ -15,7 +15,7 @@ Globally display or hide the logs based on the configuration
 npm i d_custom_logger@latest
 ```
 
-## configuration
+## Configuration
 
 Configure logger at the root of the project:
 
@@ -39,13 +39,16 @@ logger.configure({
 
 ```
 
-## usage
+## Usage
 
 ```dosini
-Based on the configuration console will display output
 
-console.error("D_CUSTOM_LOGGER error", data);
-console.log("D_CUSTOM_LOGGER log", data);
-console.warn("D_CUSTOM_LOGGER WARN", data);
+Based on the configuration console will  either display logs or hide
+
+console.error("error logs");
+console.log("success logs");
+console.warn("warning logs");
+console.info("info logs");
+
 
 ```
