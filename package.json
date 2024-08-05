@@ -1,6 +1,6 @@
 {
   "name": "d_custom_logger",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Globally display or hide the logs based on the configuration",
   "main": "index.js",
   "scripts": {
