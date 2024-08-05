@@ -6,13 +6,17 @@ const logger = require("d_custom_logger");
 // import logger from "d_custom_logger";
 
 logger.configure({
-  DLOGS_SHOW_ERROR: true,
-  DLOGS_SHOW_LOGS: true,
-  DLOGS_SHOW_WARN: true,
+  log: true,
+  error: true,
+  warn: true,
+  debug: true,
+  info: true,
+  trace: true,
+  display: true, //globally off all logs
 });
 
 let data = "testing";
 
-logger.error("D_CUSTOM_LOGGER error", data);
-logger.log("D_CUSTOM_LOGGER log", data);
-logger.warn("D_CUSTOM_LOGGER WARN", data);
+console.error("D_CUSTOM_LOGGER error", data);
+console.log("D_CUSTOM_LOGGER log", data);
+console.warn("D_CUSTOM_LOGGER WARN", data);
