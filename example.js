@@ -11,8 +11,8 @@ logger.configure({
   DLOGS_SHOW_WARN: true,
 });
 
-let data = "d_custom_logger";
+let data = "testing";
 
-logger.error("test", data);
-logger.log("test success", data);
-logger.warn("test success", data);
+logger.error("D_CUSTOM_LOGGER error", data);
+logger.log("D_CUSTOM_LOGGER log", data);
+logger.warn("D_CUSTOM_LOGGER WARN", data);

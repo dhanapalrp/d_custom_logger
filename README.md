@@ -47,4 +47,14 @@ import logger from "d_custom_logger";
 logger.error("d_custom_logger" ,"error");// d_custom_logger error
 logger.log("d_custom_logger","success"); // d_custom_logger success
 logger.warn("d_custom_logger", "warn" ); // d_custom_logger warn
+
+
+import {log,error,warn} from "d_custom_logger";//es6
+const {log,error,warn} = require("d_custom_logger");//commonJs
+
+
+error("d_custom_logger" ,"error"); // d_custom_logger error
+log("d_custom_logger","success"); // d_custom_logger success
+warn("d_custom_logger", "warn" ); // d_custom_logger warn
+
 ```
